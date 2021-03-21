@@ -1,0 +1,81 @@
+/** @format */
+
+.App {
+    text-align: center;
+    padding: 20px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+}
+
+.inp-section {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.inp {
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 20px;
+}
+*:focus {
+    outline: none;
+}
+.submit {
+    background-color: #2980b9;
+    color: white;
+    width: 200px;
+    border: 1px solid white;
+}
+.submit:hover {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.prompt {
+    text-align: center;
+    font-size: 30px;
+}
+.heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+}
+
+@media (max-width: 1440px) {
+    .layout {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .layout {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .layout {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .inp-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inp {
+        margin-bottom: 10px;
+    }
+}
