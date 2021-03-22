@@ -19,12 +19,21 @@ function App() {
     setbacktext( event.target.value );
   }
   function handleSubmit( event ) {
-    let frontface = JSON.parse(localStorage.getItem('frontface'))
-    frontface.push( {
-      id: frontface.length + 1,
-      short_story: frontext,
-      short_ans: backtext,
-    } )
+    let frontface = JSON.parse( localStorage.getItem( 'frontface' ) )
+    if ( frontface.length === 0 ) {
+      frontface.push( {
+        id: frontface.length + 1,
+        short_story: frontext,
+        short_ans: backtext,
+      } )
+    }
+    else {
+      frontface.push( {
+        id: frontface[frontface.length-1].id+1,
+        short_story: frontext,
+        short_ans: backtext,
+      } )
+    }
     localStorage.setItem( 'frontface', JSON.stringify( frontface ) )
     console.log(JSON.parse(localStorage.getItem('frontface')))
     console.log( frontface )
@@ -39,8 +48,8 @@ function App() {
       </div>
       <Button type="submit" mb = {4} onClick={ handleSubmit } colorScheme="teal" size="md">Submit</Button>
       <div id="card-layout" className="layout">
-        {( frontface === null) ? <div className = "prompt">No FlashCards Yet</div> : (frontface.length === 0) ? <div className = "prompt">No FlashCards Yet</div>: frontface.map( front => (
-          <Card key = {front.id} fronttext={front.short_story} backtext = {front.short_ans} />
+        {( frontface === null) ? <div className = "prompt">No FlashCards Yet</div> : (frontface.length === 0) ? <div className = "prompt">No FlashCards Yet</div>: frontface.map( (front,idx) => (
+          <Card className="cardbody" data-id={ idx } key = {idx} fronttext={front.short_story} backtext = {front.short_ans} id = {idx} />
         ) )}
       </div>
     </div>

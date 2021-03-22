@@ -42,7 +42,7 @@
     align-items: center;
     font-family: "Montserrat", sans-serif;
     font-size: x-large;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 .flip-card-front {
@@ -55,4 +55,15 @@
     color: white;
     transform: rotateY(180deg);
     font-family: "Montserrat", sans-serif;
+}
+.delete {
+    background: #dde;
+}
+
+.cardbody {
+    margin-top: 20px;
+}
+
+.delete-button {
+    cursor: pointer;
 }
