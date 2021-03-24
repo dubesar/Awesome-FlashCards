@@ -7,7 +7,7 @@ Start Using this Flashcard for blazing fast memory
 - [x] Creating cards and flipping on hover
 - [x] Using local storage to store the entire short key and short ans
 - [x] Enable Delete for each card so that cards can be deleted
-- [ ] Enable adding tags for cards
+- [x] Enable adding tags for cards
 - [ ] Landing page of the website
 - [ ] Search Cards by tags
 - [ ] Enable a user session for a short quiz
