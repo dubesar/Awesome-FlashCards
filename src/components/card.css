@@ -58,6 +58,8 @@
 }
 .delete {
     background: #dde;
+    display: flex;
+    align-items: center;
 }
 
 .cardbody {
@@ -66,4 +68,7 @@
 
 .delete-button {
     cursor: pointer;
+}
+.tags {
+    margin-left: 1vw;
 }

@@ -11,12 +11,16 @@ function App() {
   }
   const [frontext, setfronttext] = useState( '' )
   const [backtext, setbacktext] = useState( '' )
+  const [tag, settag] = useState( '' );
 
   function handleChange1(event) {
     setfronttext( event.target.value );
   }
   function handleChange2(event) {
     setbacktext( event.target.value );
+  }
+  function handleChange3( event ) {
+    settag( event.target.value );
   }
   function handleSubmit( event ) {
     let frontface = JSON.parse( localStorage.getItem( 'frontface' ) )
@@ -25,6 +29,7 @@ function App() {
         id: frontface.length + 1,
         short_story: frontext,
         short_ans: backtext,
+        tags: tag
       } )
     }
     else {
@@ -32,6 +37,7 @@ function App() {
         id: frontface[frontface.length-1].id+1,
         short_story: frontext,
         short_ans: backtext,
+        tags: tag
       } )
     }
     localStorage.setItem( 'frontface', JSON.stringify( frontface ) )
@@ -45,11 +51,12 @@ function App() {
       <div className="inp-section">
         <Input variant="filled" placeholder="Type frontface short text" onChange={handleChange1} className = "inp" />
         <Input variant="filled" placeholder="Type backface short text" onChange={handleChange2} className="inp" />
+        <Input variant="filled" placeholder="Tag" onChange={handleChange3} className="inp" />
       </div>
       <Button type="submit" mb = {4} onClick={ handleSubmit } colorScheme="teal" size="md">Submit</Button>
       <div id="card-layout" className="layout">
         {( frontface === null) ? <div className = "prompt">No FlashCards Yet</div> : (frontface.length === 0) ? <div className = "prompt">No FlashCards Yet</div>: frontface.map( (front,idx) => (
-          <Card className="cardbody" data-id={ idx } key = {idx} fronttext={front.short_story} backtext = {front.short_ans} id = {idx} />
+          <Card className="cardbody" data-id={ idx } tag = {front.tags} key = {idx} fronttext={front.short_story} backtext = {front.short_ans} id = {idx} />
         ) )}
       </div>
     </div>

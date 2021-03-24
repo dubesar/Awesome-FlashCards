@@ -65,6 +65,20 @@
     }
 }
 
+.tag-input {
+    background: #eee;
+    padding: 10px;
+    color: black;
+    border: 2px solid white;
+    width: 15vw;
+    border-radius: 10px;
+}
+.tag-input:focus {
+    background: white;
+    border: 2px solid blue;
+    transition: all 0.2s ease-in-out;
+}
+
 @media (max-width: 600px) {
     .layout {
         display: grid;
