@@ -1,10 +1,9 @@
 import './card.css'
 
-export default function card( {fronttext, backtext, id, tag} ) {
+export default function card( {fronttext, backtext, id, tag, searchTag} ) {
     // let id = props.frontface[0].id
     // let fronttext = props.frontface[0].short_story
-    console.log(id, tag)
-    function deleteCard(event) {
+    function deleteCard( event ) {
         let id = event.target.id;
         let frontface = JSON.parse( localStorage.getItem( 'frontface' ) )
         frontface.splice( id, 1 )
