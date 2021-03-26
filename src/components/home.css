@@ -49,6 +49,7 @@
 .heading {
     font-family: "Montserrat", sans-serif;
     font-size: 35px;
+    text-align: center;
 }
 
 @media (max-width: 1440px) {
