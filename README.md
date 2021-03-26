@@ -10,7 +10,8 @@ Start Using this Flashcard for blazing fast memory
 - [x] Enable adding tags for cards
 - [x] Display Number of cards
 - [ ] Landing page of the website
-- [ ] Search Cards by tags
+- [x] Search Cards by tags
+- [x] Add Routes for Session
 - [ ] Enable a user session for a short quiz
 - [ ] A small score table for every time user finishes his short quiz
 - [ ] Give option to share the result of a quiz on Social Media
