@@ -12,7 +12,7 @@ function App() {
   const [frontext, setfronttext] = useState( '' )
   const [backtext, setbacktext] = useState( '' )
   const [tag, settag] = useState( '' );
-  const [search, setsearch] = useState('');
+  const [searchtag, setsearchtag] = useState('');
 
   function handleChange1(event) {
     setfronttext( event.target.value );
@@ -24,7 +24,7 @@ function App() {
     settag( event.target.value );
   }
   function handleChange4( event ) {
-    setsearch( event.target.value )
+    setsearchtag( event.target.value )
   }
   function handleSubmit( event ) {
     let frontface = JSON.parse( localStorage.getItem( 'frontface' ) )
@@ -49,6 +49,12 @@ function App() {
     console.log( frontface )
     window.location.reload();
   }
+
+  function listWithTags( tag ) {
+    let taggedFrontFace = JSON.parse( localStorage.getItem( 'frontface' ) )
+    return taggedFrontFace.filter(face => face.tags === tag)
+  }
+
   return (
     <div className="App">
       <h1 className="heading">Creating a FlashCard is now Easy</h1>
@@ -59,11 +65,13 @@ function App() {
         <Input variant="filled" placeholder="Tag" onChange={handleChange3} className="inp" />
       </div>
       <Button type="submit" mb={4} onClick={handleSubmit} colorScheme="teal" size="md">Submit</Button>
-      {/* <Input variant="filled" placeholder="Search by tagname" onChange={handleChange4} className="inp" /> */}
+      <Input variant="filled" placeholder="Search by tagname" onChange={handleChange4} className="inp" />
       <div id="card-layout" className="layout">
-        {( frontface === null) ? <div className = "prompt">No FlashCards Yet</div> : (frontface.length === 0) ? <div className = "prompt">No FlashCards Yet</div>: frontface.map( (front,idx) => (
-          <Card className="cardbody" data-id={ idx } searchTag = {search} tag = {front.tags} key = {idx} fronttext={front.short_story} backtext = {front.short_ans} id = {idx} />
-        ) )}
+        {( frontface === null) ? <div className = "prompt">No FlashCards Yet</div> : (frontface.length === 0) ? <div className = "prompt">No FlashCards Yet</div>: searchtag.length === 0 ? frontface.map( (front,idx) => (
+          <Card className="cardbody" data-id={ idx } tag = {front.tags} key = {idx} fronttext={front.short_story} backtext = {front.short_ans} id = {idx} />
+        ) ) : listWithTags( searchtag ).map( ( front, idx ) => (
+          <Card className="cardbody" data-id={ idx } tag = {front.tags} key = {idx} fronttext={front.short_story} backtext = {front.short_ans} id = {idx} />
+        ))}
       </div>
     </div>
   );
