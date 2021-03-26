@@ -8,7 +8,7 @@ Start Using this Flashcard for blazing fast memory
 - [x] Using local storage to store the entire short key and short ans
 - [x] Enable Delete for each card so that cards can be deleted
 - [x] Enable adding tags for cards
-- [ ] Display Number of cards
+- [x] Display Number of cards
 - [ ] Landing page of the website
 - [ ] Search Cards by tags
 - [ ] Enable a user session for a short quiz
