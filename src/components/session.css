@@ -1,0 +1,30 @@
+/** @format */
+
+.grid-sys {
+    width: 100vw;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.test-card {
+    width: 30vw;
+    border: 2px solid teal;
+    height: 30vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: teal;
+    color: white;
+}
+
+.qtext {
+    font-size: 25px;
+}
+
+.yes-no {
+    display: flex;
+    flex-direction: column;
+}
