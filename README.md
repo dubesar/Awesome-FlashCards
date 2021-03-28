@@ -12,6 +12,7 @@ Start Using this Flashcard for blazing fast memory
 - [ ] Landing page of the website
 - [x] Search Cards by tags
 - [x] Add Routes for Session
+- [x] Generate Random Cards in Session
 - [ ] Enable a user session for a short quiz
 - [ ] A small score table for every time user finishes his short quiz
 - [ ] Give option to share the result of a quiz on Social Media
