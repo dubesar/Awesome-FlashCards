@@ -1,9 +1,10 @@
-import { Fragment } from "react";
+import { Button, ButtonGroup } from "@chakra-ui/react"
 
 export default function Session() {
     return (
-        <Fragment>
-            <h1>Welcome to session page</h1>
-        </Fragment>
+        <div>
+            <Button ml={4} mt={4}>Start Session</Button>
+            
+        </div>
     )
 }
