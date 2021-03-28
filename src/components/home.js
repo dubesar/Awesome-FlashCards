@@ -1,9 +1,9 @@
 import './home.css';
 import { frontface } from '../datasource/databasefront'
 import Card from './card'
-import React, { useState, Fragment } from 'react'
+import React, { useState} from 'react'
 import { Input } from "@chakra-ui/react"
-import { Button, ButtonGroup } from "@chakra-ui/react"
+import { Button} from "@chakra-ui/react"
 
 function Home() {
   if ( JSON.parse( localStorage.getItem( 'frontface' ) ) == null ) {

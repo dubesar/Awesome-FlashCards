@@ -1,6 +1,6 @@
 import './card.css'
 
-export default function card( {fronttext, backtext, id, tag, searchTag} ) {
+export default function card( {fronttext, backtext, id, tag} ) {
     // let id = props.frontface[0].id
     // let fronttext = props.frontface[0].short_story
     function deleteCard( event ) {

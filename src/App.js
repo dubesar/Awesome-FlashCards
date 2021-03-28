@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  withRouter
 } from "react-router-dom";
 import Session from './components/session'
 import Home from './components/home'
-import { Button, ButtonGroup } from "@chakra-ui/react"
+import { Button} from "@chakra-ui/react"
 
 function App() {
   return (
