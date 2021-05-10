@@ -11,14 +11,18 @@ import { Button} from "@chakra-ui/react"
 
 function App() {
   return (
-    <Router>
-      <Button ml={4} mt={4}><Link to="/">Home</Link></Button>
-      <Button ml={4} mt={4}><Link to="/session">Session</Link></Button>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/session" component={ Session }></Route>
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <Button ml={4} mt={4}><Link to="/">Home</Link></Button>
+        <Button ml={4} mt={4}><Link to="/session">Session</Link></Button>
+        <Button ml={4} mt={4}><Link to="/session">Scores</Link></Button>
+        <Button ml={4} mt={4}><Link to="/session">Start Quiz</Link></Button>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/session" component={ Session }></Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

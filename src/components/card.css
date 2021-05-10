@@ -76,3 +76,10 @@
     margin-left: 10px;
     cursor: pointer;
 }
+.id {
+    margin-left: 1vw;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}

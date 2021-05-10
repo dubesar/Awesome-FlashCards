@@ -33,27 +33,27 @@ export default function AddModal() {
         settag( event.target.value );
     }
     function handleSubmit( event ) {
-    let frontface = JSON.parse( localStorage.getItem( 'frontface' ) )
-    if ( frontface.length === 0 ) {
-        frontface.push( {
-        id: frontface.length + 1,
-        short_story: frontext,
-        short_ans: backtext,
-        tags: tag
-        } )
-    }
-    else {
-        frontface.push( {
-        id: frontface[frontface.length-1].id+1,
-        short_story: frontext,
-        short_ans: backtext,
-        tags: tag
-        } )
-    }
-    localStorage.setItem( 'frontface', JSON.stringify( frontface ) )
-    console.log(JSON.parse(localStorage.getItem('frontface')))
-    console.log( frontface )
-    window.location.reload();
+        let frontface = JSON.parse( localStorage.getItem( 'frontface' ) )
+        if ( frontface.length === 0 ) {
+            frontface.push( {
+            id: frontface.length + 1,
+            short_story: frontext,
+            short_ans: backtext,
+            tags: tag
+            } )
+        }
+        else {
+            frontface.push( {
+            id: frontface[frontface.length-1].id+1,
+            short_story: frontext,
+            short_ans: backtext,
+            tags: tag
+            } )
+        }
+        localStorage.setItem( 'frontface', JSON.stringify( frontface ) )
+        console.log(JSON.parse(localStorage.getItem('frontface')))
+        console.log( frontface )
+        window.location.reload();
     }
 
     return (
